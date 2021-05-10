@@ -16,7 +16,7 @@ from .rsa_decrypt import RSA
 # Routing for your application.
 ###
 
-@app.route('/', methods=['POST'])
+@app.route('/', methods=['GET', 'POST'])
 def home():
     """Render website's home page."""
     form = DecryptionForm()
