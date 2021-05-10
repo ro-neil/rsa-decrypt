@@ -87,7 +87,7 @@ input:focus, textarea:focus{
 
 #submit-button:hover{
     opacity:0.94;
-    box-shadow: 0 0 1pt 1pt var(--blue);
+    box-shadow: 0 0 1pt 1pt #BB9457;
 }
 
 #submit-button:enabled{

@@ -142,7 +142,7 @@ class RSA:
                 'm': RSA.find_m(c,d_list[0],n)
             }
             return results
-        return '"n" is invalid'
+        return f'Invalid Prime Product ({n})'
 
 
 
