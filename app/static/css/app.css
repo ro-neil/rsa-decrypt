@@ -1,0 +1,111 @@
+:root {
+    --blue: #118ab2;
+    --red: #e63946;
+    --green: #04724d;
+}
+
+body {
+    padding-top: 5rem;
+    font-family: Ubuntu, sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+
+h1, h2{
+    color: #432818;
+}
+table .thead-dark th {
+    color: #fff;
+    background-color: #99582A !important;
+    border-color: #32383e;
+}
+.table-dark {
+    color: #000;
+    background-color: #FFE6A7 !important;
+}
+.table td, .table th {
+    border-top: none !important;
+}
+.table thead th {
+    border-bottom: none;
+}
+.navbar{
+    background-color: #6F1D1B;
+}
+.row{
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+.table tbody tr{
+    font-size: 14px;
+}
+#decrypted-msg{
+    color: #432818;
+    font-weight: 700;
+    background-color: #BB9457;
+}
+form{
+    min-width: 50%;
+}
+form label {
+    font-weight: bold;
+    width: 12rem;
+    padding-top: 8px;
+}
+
+.form-group{
+    padding-bottom: 10px;
+}
+
+.form-group p{
+    margin-bottom:5px;
+}
+
+.form-group input{
+    height: 2.2rem;
+    padding-left: 0.4rem;
+    border-radius: 4px;
+    border: 1px solid rgba(67,40,24,0.3);
+}
+
+input:focus, textarea:focus{
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 0 0 1pt 1pt #BB9457;
+}
+
+#submit-button{
+    width: 100px;
+    padding: 6px;
+    border-radius: 4px;
+    background-color: #432818;
+    color: white;
+    font-weight: 600;
+    border:none;
+}
+
+#submit-button:hover{
+    opacity:0.94;
+    box-shadow: 0 0 1pt 1pt var(--blue);
+}
+
+#submit-button:enabled{
+    outline: none;
+}
+
+.danger, .success{
+    list-style: none;
+    font-weight:bold;
+    font-size:larger;
+}
+
+.danger{
+    color:var(--red);
+    margin-left: 280px;
+}
+
+.success{
+    color:var(--green);
+    margin-left: 287px;
+}

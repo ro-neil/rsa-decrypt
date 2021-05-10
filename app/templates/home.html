@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block main %}
+    <h1 class='mb-5'>RSA Decrypt</h1>
+
+    <form method="POST" action="{{ url_for('home') }}" class='my-5'>
+        {{ form.csrf_token }}
+        <div class="form-group">
+            {{ form.cyphertext.label }}
+            {{ form.cyphertext }}
+        </div>
+        <div class="form-group">
+            {{ form.exponent.label }}
+            {{ form.exponent }}
+        </div>
+        <div class="form-group">
+            {{ form.public_key.label }}
+            {{ form.public_key }}
+        </div>
+        <button type="submit" id="submit-button">Decrypt</button>
+    </form>
+    <hr>
+    <h2 class='mb-5'>Results</h2>
+    {% if success %}
+        <table class="table table-hover table-dark table-striped">
+            <thead class='thead-dark'>
+            <tr>
+                <th scope="col">Attributes</th>
+                <th scope="col">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">Prime Factors ( p , q )</th>
+                <td>{{ results['p'] }} and {{ results['q'] }}</td>
+            </tr>
+            <tr>
+                <th scope="row">Phi of n ( 𝚽(n) )</th>
+                <td>{{ results['phi-of-n'] }}</td>
+            </tr>
+            <tr>
+                <th scope="row">Private Exponent ( d )</th>
+                <td>{{ results['d'] }}</td>
+            </tr>
+            <tr>
+                <th scope="row">Decrypted Message ( m )</th>
+                <td id='decrypted-msg'>{{ results['m'] }}</td>
+            </tr>
+            </tbody>
+        </table>
+    {% else %}
+        <p class='h4'>{{ results }}</p>
+    {% endif %}
+{% endblock %}

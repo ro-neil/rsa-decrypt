@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block main %}
+<h1>Contact Form</h1><hr>
+<h6 id="form-instructions">Fill in this form to contact the site owners.</h6>
+
+<form method="post" action="{{ url_for('contact') }}">
+    {{ form.csrf_token }}
+    <div class="form-group">
+        {{ form.cyphertext.label }}<span class="required-text">(Required)</span>
+        <p>cyphertext</p>
+        {{ form.cyphertext }}
+    </div>
+    <div class="form-group">
+        {{ form.exponent.label }}<span class="required-text">(Required)</span>
+        <p>Please enter your exponent</p>
+        {{ form.exponent }}
+    </div>
+    <div class="form-group">
+        {{ form.public_key.label }}<span class="required-text">(Required)</span>
+        <p>Please enter the public_key</p>
+        {{ form.public_key }}
+    </div>
+    <div class="form-group">
+        {{ form.message.label }}<span class="required-text">(Required)</span>
+        <p>Please enter the message you would like to send.</p>
+        {{ form.message }}
+    </div>
+    <button type="submit" id="submit-button">Send</button>
+</form>
+
+{% endblock %}
